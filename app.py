@@ -4,6 +4,28 @@ import numpy as np
 import pickle
 import os
 
+st.set_page_config(
+    page_title="AIGC学业风险预警助手",
+    page_icon="🎓",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
+# 移动端CSS修复
+st.markdown("""
+<style>
+    .stSlider {
+        width:100% !important;
+    }
+    @media (max-width: 768px) {
+        .stColumns {
+            display:block !important;
+        }
+    }
+</style>
+""", unsafe_allow_html=True)
+
+
 st.set_page_config(page_title="AIGC学业风险预警助手", page_icon="🎓", layout="wide", initial_sidebar_state="collapsed")
 
 # 加载模型
@@ -180,4 +202,4 @@ with col2:
 
 # 底部
 st.divider()
-st.caption("© 应用统计学课题组 | 数据仅本地计算，不上传云端 | 演示原型，正式版可对接教务系统")
+st.caption("| 数据仅本地计算，不上传云端 | 演示原型，正式版可对接教务系统")
